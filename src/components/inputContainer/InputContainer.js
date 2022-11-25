@@ -3,7 +3,7 @@ import './inputContainer.css'
 import InputCard from "./InputCard";
 import {CSSTransition} from "react-transition-group";
 
-const InputContainer = () => {
+const InputContainer = ({listId}) => {
     const [open, setOpen] = useState(false)
     return (
         <div>
@@ -13,7 +13,7 @@ const InputContainer = () => {
                 </div>
             </div>
             <CSSTransition classNames='alert' in={open} timeout={300} unmountOnExit>
-                <InputCard setOpen={setOpen}/>
+                <InputCard setOpen={setOpen} listId={listId}/>
             </CSSTransition>
         </div>
     );
