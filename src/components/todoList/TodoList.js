@@ -9,7 +9,7 @@ const TodoList = ({list}) => {
         <div className='list__container'>
             <TodoTitle title={list.title}/>
             {list.cards.map((card) => (
-                <TodoCard key={card.id}/>
+                <TodoCard key={card.id} card={card}/>
             ))}
             <InputContainer/>
         </div>

@@ -1,11 +1,12 @@
 .inputContainer{
-    height: 5vh;
+    height: 4.5vh;
     width: auto;
     align-items: center ;
     text-align: left;
     background-color: #f6f6f6;
-    border-radius: 5px;
-    margin: 0px 5px;
+    border-radius: 8px;
+    margin: 0px 5px 5px 5px;
+
     padding: 10px;
     font-size: 20px;
 }

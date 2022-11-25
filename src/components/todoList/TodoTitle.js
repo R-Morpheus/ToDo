@@ -17,7 +17,7 @@ const TodoTitle = ({title}) => {
                 </div>
             ) : (
                 <div>
-                    <h3 onClick={() => setOpen(!open)}>TODO</h3>
+                    <h3 onClick={() => setOpen(!open)}>{title}</h3>
                 </div>
             )}
             <MyButton>...</MyButton>

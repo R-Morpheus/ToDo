@@ -1,10 +1,10 @@
 import React from 'react';
 import './todoCard.css'
 
-const TodoCard = () => {
+const TodoCard = ({card}) => {
     return (
         <div className='card'>
-            Сделать трелло клон
+            {card.title}
         </div>
     );
 };
