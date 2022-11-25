@@ -1,0 +1,31 @@
+.inputCard__container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.inputCard__input{
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    height: 6vh;
+    margin: 8px;
+    padding: 10px;
+}
+
+.inputCard__button{
+    border: 1px solid grey;
+    width: 60px;
+    height: 2vh;
+    padding: 5px;
+    margin: 5px;
+    background-color: green;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
