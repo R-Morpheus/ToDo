@@ -27,7 +27,7 @@ const InputCard = ({setOpen, listId, type}) => {
         <div className='inputCard__container'>
             <div>
                 <input
-                    placeholder={type === 'card' ? 'Enter a title...' : 'Enter a title list...'}
+                    placeholder={type === 'card' ? 'Enter a title card...' : 'Enter a title list...'}
                     className='inputCard__input'
                     type="text"
                     onChange={handleOnChange}

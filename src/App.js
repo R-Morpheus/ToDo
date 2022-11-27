@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import Navbar from "./components/navbar/Navbar";
 import TodoContainer from "./components/todoContainer/TodoContainer";
 import './styles/App.css';
