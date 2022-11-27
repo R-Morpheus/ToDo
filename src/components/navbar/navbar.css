@@ -4,7 +4,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: aquamarine ;
+    background: aquamarine;
+    margin-bottom: 10px;
 }
 
 .navbar__title{

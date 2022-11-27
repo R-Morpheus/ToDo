@@ -1,33 +1,38 @@
 import React, {useContext, useState} from 'react';
-import './inputCard.css'
 import storeApi from "../store/storeApi";
+import './inputCard.css'
 
-
-
-
-const InputCard = ({setOpen, listId}) => {
-    const [cardTitle, setCardTitle] = useState('')
-    const {addCard} = useContext(storeApi)
+const InputCard = ({setOpen, listId, type}) => {
+    const [title, setTitle] = useState('')
+    const {addCard, addList} = useContext(storeApi)
 
     const handleOnChange = (e) => {
-        setCardTitle(e.target.value)
+        setTitle(e.target.value)
     }
 
     const handleBtnConfirm = () => {
-        addCard(cardTitle, listId)
-        setOpen(false)
+        if (type === 'card'){
+            addCard(title, listId)
+            setTitle('')
+            setOpen(false)
+        }
+        else{
+            addList(title)
+            setTitle('')
+            setOpen(false)
+        }
     }
-
 
     return (
         <div className='inputCard__container'>
             <div>
                 <input
-                    placeholder='Enter a title...'
+                    placeholder={type === 'card' ? 'Enter a title...' : 'Enter a title list...'}
                     className='inputCard__input'
                     type="text"
                     onChange={handleOnChange}
-                    value={cardTitle}
+                    onBlur={() => setOpen(false)}
+                    value={title}
                 />
             </div>
             <div>
@@ -35,7 +40,7 @@ const InputCard = ({setOpen, listId}) => {
                     className='inputCard__button'
                     onClick={handleBtnConfirm}
                 >
-                    Add
+                    {type === 'card' ? 'Add card' : 'Add list'}
                 </button>
                 <button
                     className='inputCard__button'

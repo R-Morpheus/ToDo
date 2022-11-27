@@ -11,7 +11,7 @@ const TodoList = ({list}) => {
             {list.cards.map((card) => (
                 <TodoCard key={card.id} card={card}/>
             ))}
-            <InputContainer listId={list.id}/>
+            <InputContainer listId={list.id} type='card'/>
         </div>
     );
 };
