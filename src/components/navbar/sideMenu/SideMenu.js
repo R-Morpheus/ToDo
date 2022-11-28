@@ -1,6 +1,5 @@
 import React from 'react';
 import "./sideMenu.css"
-import BoxMenu from "./BoxMenu";
 
 const SideMenu = ({setActive, active}) => {
     return (

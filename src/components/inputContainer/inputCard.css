@@ -1,11 +1,11 @@
-.inputCard__container{
+.inputCard__container {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: auto;
 }
 
-.inputCard__input{
+.inputCard__input {
     border: none;
     background-color: white;
     border-radius: 5px;
@@ -17,7 +17,7 @@
     border: 2px solid #525252;
 }
 
-.inputCard__button{
+.inputCard__button {
     width: 80px;
     padding: 5px 10px;
     margin: 2px 5px;
@@ -40,10 +40,12 @@
     left: -75px;
     transform: skewX(-45deg);
 }
+
 .inputCard__button:hover {
     background: #525252;
     color: #fff;
 }
+
 .inputCard__button:hover:before {
     left: 150px;
     transition: .5s ease-in-out;
