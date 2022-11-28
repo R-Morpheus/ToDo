@@ -1,5 +1,5 @@
 .inputContainer{
-    height: 4.5vh;
+    height: 50px;
     width: 290px;
     align-items: center ;
     text-align: left;
@@ -11,7 +11,7 @@
 }
 
 .inputContainer:hover {
-    background-color: #888787;
+    background-color: #525252;
     transition-duration: 0.25s;
 }
 

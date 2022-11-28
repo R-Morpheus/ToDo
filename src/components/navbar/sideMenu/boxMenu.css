@@ -1,0 +1,14 @@
+.menu{
+    display: flex;
+    justify-content: space-around;
+    transition: all 0.4s;
+}
+
+.menu__box{
+    margin-top: 10px;
+    width: 40%;
+    height: 90px;
+    background-color: blue;
+    border-radius: 10px;
+    position: absolute;
+}

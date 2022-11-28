@@ -1,0 +1,72 @@
+.sideMenu__container{
+    width: 30%;
+    height: 2000px;
+    background-color: #f6f6f6;
+    position: fixed;
+    right: 0;
+    transform: translateX(+100%);
+    transition: all 0.4s;
+    z-index: 1;
+}
+
+.sideMenu__container.active{
+    transform: translateX(0);
+}
+
+.menu__content{
+    display: flex;
+    justify-content: space-around;
+    transition: all 0.6s;
+}
+
+.menu__item{
+    margin-top: 10px;
+    width: 45%;
+    height: 90px;
+    background-color: blue;
+    border-radius: 10px;
+}
+
+.blur{
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(2px);
+}
+
+.menu__info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu__button{
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 5px 5px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #525252;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    color: #525252;
+    transition: .2s ease-in-out;
+}
+
+.menu__button:before {
+    content: "";
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -8px;
+    left: -75px;
+    transform: skewX(-45deg);
+}
+.menu__button:hover {
+    background: #525252;
+    color: #fff;
+}
+.menu__button:hover:before {
+    left: 150px;
+    transition: .5s ease-in-out;
+}

@@ -2,7 +2,7 @@ import React, {useContext, useState} from 'react';
 import storeApi from "../store/storeApi";
 import './inputCard.css'
 
-const InputCard = ({setOpen, listId, type}) => {
+const InputCard = ({setOpen, listId, type, setOpenInput, openInput}) => {
     const [title, setTitle] = useState('')
     const {addCard, addList} = useContext(storeApi)
 
@@ -15,19 +15,26 @@ const InputCard = ({setOpen, listId, type}) => {
             addCard(title, listId)
             setTitle('')
             setOpen(false)
+            setOpenInput(true)
         }
         else{
             addList(title)
             setTitle('')
             setOpen(false)
+            setOpenInput(true)
         }
+    }
+
+    const returnBtn = () => {
+        setOpen(false)
+        setOpenInput(true)
     }
 
     return (
         <div className='inputCard__container'>
             <div>
                 <input
-                    placeholder={type === 'card' ? 'Enter a title card...' : 'Enter a title list...'}
+                    placeholder={type === 'card' ? 'Enter a title...' : 'Enter a title list...'}
                     className='inputCard__input'
                     type="text"
                     onChange={handleOnChange}
@@ -44,7 +51,7 @@ const InputCard = ({setOpen, listId, type}) => {
                 </button>
                 <button
                     className='inputCard__button'
-                    onClick={() => setOpen(false)}>
+                    onClick={returnBtn}>
                     Close
                 </button>
             </div>

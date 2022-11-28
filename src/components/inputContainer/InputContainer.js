@@ -5,15 +5,25 @@ import {CSSTransition} from "react-transition-group";
 
 const InputContainer = ({listId, type}) => {
     const [open, setOpen] = useState(false)
+    const [openInput, setOpenInput] = useState(true)
+
+    const changeInput = () => {
+        setOpen(!open)
+        setOpenInput(!openInput)
+    }
     return (
         <div>
-            <div className='inputContainer'>
-                <div onClick={() => setOpen(!open)}>
-                    {type === 'card' ? '+ Add card' : '+ Add list'}
+            <CSSTransition classNames='alert' in={openInput} timeout={300} unmountOnExit>
+                <div className='inputContainer'>
+                    <div onClick={changeInput}>
+                        {type === 'card' ? '+ Add card' : '+ Add list'}
+                    </div>
                 </div>
-            </div>
+            </CSSTransition>
             <CSSTransition classNames='alert' in={open} timeout={300} unmountOnExit>
-                <InputCard setOpen={setOpen} listId={listId} type={type}/>
+                <InputCard setOpen={setOpen} listId={listId} type={type} openInput={openInput} setOpenInput={setOpenInput}
+                onClick={() => setOpenInput(false)}
+                />
             </CSSTransition>
         </div>
     );

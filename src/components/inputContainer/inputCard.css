@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: auto;
 }
 
 .inputCard__input{
@@ -12,21 +13,38 @@
     height: 6vh;
     margin: 8px;
     padding: 10px;
+    width: 150px;
+    border: 2px solid #525252;
 }
 
-.inputCard__button{
-    border: 1px solid grey;
-    width: 60px;
-    height: 2vh;
-    padding: 5px;
-    margin: 5px;
-    background-color: green;
-    border-radius: 5px;
-    color: white;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 10px;
+.inputCard__button {
+    width: 80px;
+    padding: 5px 10px;
+    margin: 2px 5px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #525252;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    color: #525252;
+    transition: .2s ease-in-out;
+}
+
+.inputCard__button:before {
+    content: "";
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -8px;
+    left: -75px;
+    transform: skewX(-45deg);
+}
+.inputCard__button:hover {
+    background: #525252;
+    color: #fff;
+}
+.inputCard__button:hover:before {
+    left: 150px;
+    transition: .5s ease-in-out;
 }

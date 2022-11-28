@@ -4,6 +4,8 @@ import './todoList.css'
 import TodoCard from "../todoCard/TodoCard";
 import InputContainer from "../inputContainer/InputContainer";
 import {Draggable, Droppable} from "react-beautiful-dnd";
+import classes from '../inputContainer/inputContainer.module.css';
+
 
 const TodoList = ({list, index}) => {
     return (
@@ -22,7 +24,9 @@ const TodoList = ({list, index}) => {
                                 </div>
                             )}
                         </Droppable>
-                        <InputContainer listId={list.id} type='card'/>
+                        <div className={classes.inputContainer}>
+                            <InputContainer listId={list.id} type='card' />
+                        </div>
                     </div>
                 </div>
             )}
