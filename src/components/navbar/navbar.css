@@ -13,7 +13,8 @@
 .navbar__title{
     flex-grow: 1;
     margin: 0px 10px;
-    color: antiquewhite;
+    color: dimgrey;
+    text-shadow: 1px 1px 1px #000;
 }
 
 .navbar__button{

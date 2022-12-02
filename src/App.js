@@ -6,16 +6,7 @@ import './styles/App.css';
 function App() {
     const [backgroundImage, setBackgroundImage] = useState('white')
   return (
-          <div
-              className='App'
-              style={{
-                  backgroundImage: `url(${backgroundImage})`,
-                  backgroundColor: backgroundImage,
-                  backgroundRepeat:"no-repeat",
-                  backgroundSize: "cover",
-
-              }}>
-
+          <div className='App' style={{backgroundImage: `url(${backgroundImage})`, backgroundColor: backgroundImage,}}>
               <Navbar setBackgroundImage={setBackgroundImage}/>
               <TodoContainer/>
           </div>
