@@ -4,7 +4,7 @@ import colors from "../../UI/utils/color";
 import {CSSTransition} from "react-transition-group";
 import {getImages} from "../../store/imageApi";
 
-const SideMenu = ({setActive, active, handleOnBlur, setBackgroundImage}) => {
+const SideMenu = ({setActive, active, setBackgroundImage}) => {
     const [openOptionColor, setOpenOptionColor] = useState(false)
     const [openOptionImage, setOpenOptionImage] = useState(false)
     const [images, setImages] = useState([])

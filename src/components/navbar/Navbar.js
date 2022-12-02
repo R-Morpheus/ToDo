@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import "./navbar.css"
 import SideMenu from "./sideMenu/SideMenu";
 
-const Navbar = ({setBackgroundImage, }) => {
+const Navbar = ({setBackgroundImage,setBackgroundColor }) => {
     const [activeMenu, setActiveMenu] = useState(false)
 
     const handleOnBlur = (e) => {
@@ -18,7 +18,8 @@ const Navbar = ({setBackgroundImage, }) => {
             >
                 Change background
             </button>
-            <SideMenu active={activeMenu} setActive={setActiveMenu} handleOnBlur={handleOnBlur} setBackgroundImage={setBackgroundImage}/>
+            <SideMenu active={activeMenu} setActive={setActiveMenu} handleOnBlur={handleOnBlur}
+                      setBackgroundImage={setBackgroundImage}/>
         </div>
     );
 };
