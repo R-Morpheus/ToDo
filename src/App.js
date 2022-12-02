@@ -1,13 +1,22 @@
-import React from "react";
+import React, {useState} from "react";
 import Navbar from "./components/navbar/Navbar";
 import TodoContainer from "./components/todoContainer/TodoContainer";
 import './styles/App.css';
 
 function App() {
-
+    const [backgroundImage, setBackgroundImage] = useState('white')
   return (
-          <div className='App'>
-              <Navbar/>
+          <div
+              className='App'
+              style={{
+                  backgroundImage: `url(${backgroundImage})`,
+                  backgroundColor: backgroundImage,
+                  backgroundRepeat:"no-repeat",
+                  backgroundSize: "cover",
+
+              }}>
+
+              <Navbar setBackgroundImage={setBackgroundImage}/>
               <TodoContainer/>
           </div>
   );

@@ -1,5 +1,7 @@
+
+
 .sideMenu__container{
-    width: 30%;
+    width: 20%;
     height: 2000px;
     background-color: #f6f6f6;
     position: fixed;
@@ -19,13 +21,71 @@
     transition: all 0.6s;
 }
 
-.menu__item{
+
+.menu__item__one{
     margin-top: 10px;
     width: 45%;
     height: 90px;
-    background-color: blue;
     border-radius: 10px;
+    border: 1px solid #525252;
+    background-image: url('../../UI/img/forest.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+    cursor: pointer;
 }
+
+.menu__item__two {
+    margin-top: 10px;
+    width: 45%;
+    height: 90px;
+    border-radius: 10px;
+    border: 1px solid #525252;
+    background-image: url('../../UI/img/colors.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.menu__item__color{
+    margin-top: 10px;
+    width: 45%;
+    height: 90px;
+    border-radius: 10px;
+    border: 1px solid #525252;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.menu__colors{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.menu__images{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.menu__item__image{
+    margin-top: 10px;
+    width: 45%;
+    height: 90px;
+    border-radius: 10px;
+    border: 1px solid #525252;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+    cursor: pointer;
+}
+
 
 .blur{
     width: 100vw;
@@ -50,6 +110,7 @@
     font-family: 'Montserrat', sans-serif;
     color: #525252;
     transition: .2s ease-in-out;
+    cursor: pointer;
 }
 
 .menu__button:before {
@@ -69,4 +130,22 @@
 .menu__button:hover:before {
     left: 150px;
     transition: .5s ease-in-out;
+}
+
+.alert-enter{
+    opacity: 0;
+    transform: scale(0.9);
+}
+.alert-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+}
+.alert-exit {
+    opacity: 1;
+}
+.alert-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 300ms,transform 300ms;;
 }

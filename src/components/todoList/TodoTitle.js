@@ -1,6 +1,5 @@
 import React, {useContext, useState} from 'react';
 import './todoTitle.css'
-import MyButton from "../UI/button/MyButton";
 import storeApi from "../store/storeApi";
 
 const TodoTitle = ({title, listId}) => {
@@ -33,7 +32,6 @@ const TodoTitle = ({title, listId}) => {
                     <h3 onClick={() => setOpen(!open)}>{title}</h3>
                 </div>
             )}
-            <MyButton>...</MyButton>
         </div>
     );
 };

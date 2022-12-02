@@ -13,14 +13,14 @@ const InputContainer = ({listId, type}) => {
     }
     return (
         <div>
-            <CSSTransition classNames='alert' in={openInput} timeout={300} unmountOnExit>
+            <CSSTransition classNames='alert' in={openInput} timeout={600} unmountOnExit>
                 <div className='inputContainer'>
                     <div onClick={changeInput}>
                         {type === 'card' ? '+ Add card' : '+ Add list'}
                     </div>
                 </div>
             </CSSTransition>
-            <CSSTransition classNames='alert' in={open} timeout={300} unmountOnExit>
+            <CSSTransition classNames='alert' in={open} timeout={600} unmountOnExit>
                 <InputCard setOpen={setOpen} listId={listId} type={type} openInput={openInput} setOpenInput={setOpenInput}
                 onClick={() => setOpenInput(false)}
                 />
